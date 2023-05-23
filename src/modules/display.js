@@ -1,22 +1,21 @@
-import scoreHolder from "../index.js";
+import scoreHolder from '../index.js';
 
-let scoresList = document.querySelector('.scoresList');
+const scoresList = document.querySelector('.scoresList');
 
 const styling = () => {
-  let listInstances = document.querySelectorAll('.listInstance');
+  const listInstances = document.querySelectorAll('.listInstance');
   listInstances.forEach((instance) => {
-    if(instance.getAttribute('data-index') % 2 === 0){
+    if (instance.getAttribute('data-index') % 2 === 0) {
       instance.style.backgroundColor = 'white';
-    }else {
+    } else {
       instance.style.backgroundColor = '#d5d5d5';
     }
-  })  
-}
+  });
+};
 
 const displayContent = () => {
-  //const scoresList = document.querySelector('.scoresList');
+  // const scoresList = document.querySelector('.scoresList');
   if (!scoresList) {
-    console.error("Unable to find 'scoresList' element.");
     return;
   }
 

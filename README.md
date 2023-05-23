@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>webpack template</b></h3>
+  <h3><b>LeaderBoard app</b></h3>
 
 </div>
 
