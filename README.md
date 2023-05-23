@@ -30,8 +30,8 @@
 
 # 📖 [webpack template] <a name="about-project"></a>
 
-this is a webpack environment and structure
-
+this is a LeaderBoard application used 
+to see a list of scores
 ## 🛠 Built With <a name="built-with">html and css</a>
 
 ### Tech Stack <a name="tech-stack">html and css</a>
@@ -54,13 +54,13 @@ i buit this website using the html and css tech stack.
 
 ### Key Features <a name="key-features"></a>
 
--this is a webpack template
+-this is a LeaderBoard application that calls upon an API to collect and save data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-there is no live demo for this template
+there is no live demo for this app yet.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,7 +152,7 @@ no presentation is available for this project yet.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--adding more functionality to this template
+-adding more functionality to this application
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +161,7 @@ no presentation is available for this project yet.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page: https://github.com/gisachris/Webpack-template/issues
+Feel free to check the issues page: https://github.com/gisachris/LeaderBoard/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
