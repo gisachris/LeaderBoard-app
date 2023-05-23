@@ -1,14 +1,10 @@
 import _ from 'lodash';
 import './style.css';
+import './modules/addScores.js';
+import './modules/display.js';
+import displayContent from './modules/display.js';
 
- function component() {
-   const element = document.createElement('div');
+const scoreHolder = [];
+export default scoreHolder;
 
-  // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
-
-   return element;
- }
-
- document.body.appendChild(component());
+window.addEventListener('load',displayContent);
