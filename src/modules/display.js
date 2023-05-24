@@ -13,8 +13,9 @@ const styling = () => {
   });
 };
 
+window.addEventListener('load', styling);
+
 const displayContent = () => {
-  // const scoresList = document.querySelector('.scoresList');
   if (!scoresList) {
     return;
   }

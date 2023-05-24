@@ -28,7 +28,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [webpack template] <a name="about-project"></a>
+# 📖 [LeaderBoard application] <a name="about-project"></a>
 
 this is a LeaderBoard application used 
 to see a list of scores
