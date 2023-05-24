@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
-<script defer src="runtime.dd1c2831b98c4e9aca80.js"></script><script defer src="main.02c3bb331a3b8ed19f36.js"></script></head>
+    <title>LeaderBoard</title>
+<script defer src="runtime.dd1c2831b98c4e9aca80.js"></script><script defer src="main.ad2bbd7771ca0bcb150a.js"></script></head>
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="DocContainer">
+        <header></header>
+        <main class="appContainer">
+            <h1 class="titleHeader"><span class="header">Leader Board</span></h1>
+            <section class="appsection">
+                <section class="scoreDisplay">
+                    <article class="scoreHeader">
+                        <h2 class="scoreHeading">Recent Scores</h2>
+                        <button class="refreshScores">Refresh</button>
+                    </article>
+                    <ul class="scoresList">
+                    </ul>
+                </section>
+                <section class="scoreEntry">
+                    <article class="scoreEntryHeader">
+                        <h2 class="scoreEntryHeading">Add Your Score</h2>
+                    </article>
+                    <input type="text" required class="InputName" placeholder="Your Name"><br><br>
+                    <input type="text" required class="Inputscore"placeholder="Your Score"><br><br>
+                    <button class="submitScores">Submit</button>
+                </section>
+            </section>
+        </main>       
+    </div>    
 </body>
 </html>
