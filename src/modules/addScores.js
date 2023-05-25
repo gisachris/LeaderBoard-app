@@ -2,24 +2,24 @@
 import { create } from 'lodash';
 import diplayContent from './display.js';
 
-//create the game
+// create the game
 const createGame = async () => {
   const GameResource = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   const init = {
-    method:'POST',
-    headers:{
-      'content-type':'application/json'
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
     },
-    body:JSON.stringify({'name': 'The Chris Game'})
-  }
+    body: JSON.stringify({ name: 'The Chris Game' }),
+  };
   try {
-  const request = await fetch(GameResource,init);
-  const responce = await request.json();
-  console.log(responce);
-  } catch(error) {
-    console.log(error);
+    const request = await fetch(GameResource, init);
+    const responce = await request.json();
+    return responce;
+  } catch (error) {
+    return error;
   }
-}
+};
 
 // select from the dom
 const NameInput = document.querySelector('.InputName');
@@ -45,23 +45,23 @@ const createScore = async () => {
   const scoreValue = ScoreInput.value;
   const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lE7dGkUhT4iH7WytJXho/scores/';
   const init = {
-    method:'POST',
-    headers:{
-      'content-type':'application/json'
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
     },
-    body: JSON.stringify({'user':nameValue,'score':scoreValue})
-  }
+    body: JSON.stringify({ user: nameValue, score: scoreValue }),
+  };
   try {
-    const request = await fetch(scoresList,init);
+    const request = await fetch(scoresList, init);
     const responce = await request.json();
-    console.log(responce);
-  } catch(error) {
-    console.log(error);
+    return responce;
+  } catch (error) {
+    return error;
   }
-}  
+};
 
 // eventlistener for button
-AddButton.addEventListener('click',async () => {
+AddButton.addEventListener('click', async () => {
   if (validator()) {
     return;
   }

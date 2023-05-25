@@ -1,10 +1,10 @@
-//import refresh function
-import displayContent from "./display.js"; 
+// import refresh function
+import displayContent from './display.js';
 
-//select refresh button
+// select refresh button
 const refreshButton = document.querySelector('.refreshScores');
 
-//eventlistener to the button
-refreshButton.addEventListener('click',() => {
+// eventlistener to the button
+refreshButton.addEventListener('click', () => {
   displayContent();
 });
