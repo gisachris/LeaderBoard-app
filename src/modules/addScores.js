@@ -1,27 +1,30 @@
 // imports
-import scoreHolder from '../index.js';
+import { create } from 'lodash';
 import diplayContent from './display.js';
+
+// create the game
+const createGame = async () => {
+  const GameResource = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+  const init = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ name: 'The Chris Game' }),
+  };
+  try {
+    const request = await fetch(GameResource, init);
+    const responce = await request.json();
+    return responce;
+  } catch (error) {
+    return error;
+  }
+};
 
 // select from the dom
 const NameInput = document.querySelector('.InputName');
 const ScoreInput = document.querySelector('.Inputscore');
 const AddButton = document.querySelector('.submitScores');
-
-// create a score
-const ScoreCreator = () => {
-  class ScoreObj {
-    constructor(name, score) {
-      this.index = scoreHolder.length;
-      this.name = name;
-      this.score = score;
-    }
-  }
-
-  const name = NameInput.value;
-  const marks = ScoreInput.value;
-  const score = new ScoreObj(name, marks);
-  scoreHolder.push(score);
-};
 
 const validator = () => {
   const nameData = NameInput.value;
@@ -37,23 +40,43 @@ const clear = () => {
   ScoreInput.value = '';
 };
 
+const createScore = async () => {
+  const nameValue = NameInput.value;
+  const scoreValue = ScoreInput.value;
+  const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lE7dGkUhT4iH7WytJXho/scores/';
+  const init = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ user: nameValue, score: scoreValue }),
+  };
+  try {
+    const request = await fetch(scoresList, init);
+    const responce = await request.json();
+    return responce;
+  } catch (error) {
+    return error;
+  }
+};
+
 // eventlistener for button
-AddButton.addEventListener('click', () => {
+AddButton.addEventListener('click', async () => {
   if (validator()) {
     return;
   }
-  ScoreCreator();
+  await createScore();
   diplayContent();
   clear();
 });
 
 // eventlistener for enterkey
-document.addEventListener('keyup', (event) => {
+document.addEventListener('keyup', async (event) => {
   if (event.key === 'Enter') {
     if (validator()) {
       return;
     }
-    ScoreCreator();
+    await createScore();
     diplayContent();
     clear();
   }

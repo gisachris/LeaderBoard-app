@@ -91,7 +91,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/gisachris/Webpack-template.git```
+  git clone https://github.com/gisachris/LeaderBoard.git```
 
 
 ### Install
