@@ -1,35 +1,33 @@
-import scoreHolder from '../index.js';
+import RetrieveScores from './retrieve.js';
 
 const scoresList = document.querySelector('.scoresList');
 
-const styling = () => {
-  const listInstances = document.querySelectorAll('.listInstance');
-  listInstances.forEach((instance) => {
-    if (instance.getAttribute('data-index') % 2 === 0) {
-      instance.style.backgroundColor = 'white';
-    } else {
-      instance.style.backgroundColor = '#d5d5d5';
-    }
-  });
-};
+window.addEventListener('load',RetrieveScores);
 
-window.addEventListener('load', styling);
-
-const displayContent = () => {
+const displayContent = async () => {
   if (!scoresList) {
     return;
   }
 
-  scoresList.innerHTML = '';
-  scoreHolder.forEach((obj) => {
-    const li = document.createElement('li');
-    li.classList.add('listInstance');
-    li.setAttribute('data-index', obj.index);
-    li.textContent = `${obj.name}: ${obj.score}`;
-    scoresList.appendChild(li);
-  });
+  try {
+    const scores = await RetrieveScores();
+    const { result } = scores;
 
-  styling();
+    scoresList.innerHTML = '';
+    result.forEach((obj, index) => {
+      const li = document.createElement('li');
+      li.classList.add('listInstance');
+      li.setAttribute('data-index', index);
+      li.textContent = `${obj.user}: ${obj.score}`;
+      scoresList.appendChild(li);
+      if(index % 2 !== 0){
+        li.style.backgroundColor = '#d5d5d5';
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
+
 
 export default displayContent;

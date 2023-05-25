@@ -3,7 +3,6 @@ const appsection = document.querySelector('.appsection');
 const scoreHeader = document.querySelector('.scoreHeader');
 const scoresList = document.querySelector('.scoresList');
 const refreshScores = document.querySelector('.refreshScores');
-const listInstance = document.querySelector('.listInstance');
 
 // placing elements within the page
 appsection.style.display = 'flex';
