@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 html,
@@ -88,7 +87,7 @@ body {
 
 button:active {
   background-color: #96be25;
-  box-shadow: 0px 0px 0px black;
+  box-shadow: 0 0 0 black;
   border-radius: 5px;
   font-family: 'Tilt Warp', cursive;
 }
@@ -142,7 +141,7 @@ button:active {
   margin-left: 20px;
   height: auto;
   padding-left: 0;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .listInstance {
@@ -187,7 +186,7 @@ button:active {
 
 .sucessTextHolder {
   position: relative;
-  top: -10px;  
+  top: -10px;
   width: 400px;
   height: 60px;
   background-color: white;
@@ -196,16 +195,16 @@ button:active {
   justify-content: center;
   border-radius: 10px;
   opacity: 0%;
-  transition: top,opacity 400ms ease-in 0ms;
+  transition: top, opacity 400ms ease-in 0ms;
 }
 
 .sucessText {
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .failureTextHolder {
   position: relative;
-  top: -10px;  
+  top: -10px;
   width: 400px;
   height: 60px;
   background-color: white;
@@ -214,16 +213,16 @@ button:active {
   justify-content: center;
   border-radius: 10px;
   opacity: 0%;
-  transition: top,opacity 400ms ease-in 0ms;
+  transition: top, opacity 400ms ease-in 0ms;
 }
 
 .failureText {
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .refreshTextHolder {
   position: relative;
-  top: -10px;  
+  top: -10px;
   width: 400px;
   height: 60px;
   background-color: white;
@@ -232,11 +231,11 @@ button:active {
   justify-content: center;
   border-radius: 10px;
   opacity: 0%;
-  transition: top,opacity 400ms ease-in 0ms;
+  transition: top, opacity 400ms ease-in 0ms;
 }
 
 .refreshText {
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .animateParent {
@@ -255,7 +254,7 @@ button:active {
 
 .animateHolder {
   position: relative;
-  top: 70px;  
+  top: 70px;
   opacity: 100%;
   width: 400px;
   height: 60px;
