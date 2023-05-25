@@ -43,7 +43,7 @@ const clear = () => {
 const createScore = async () => {
   const nameValue = NameInput.value;
   const scoreValue = ScoreInput.value;
-  const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lE7dGkUhT4iH7WytJXho/scores/';
+  const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/nYYww3reBZgX7TQSCrxq/scores/';
   const init = {
     method: 'POST',
     headers: {
