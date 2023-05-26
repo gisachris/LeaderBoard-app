@@ -1,5 +1,5 @@
 const RetrieveScores = async () => {
-  const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lE7dGkUhT4iH7WytJXho/scores/';
+  const scoresList = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/nYYww3reBZgX7TQSCrxq/scores/';
 
   try {
     const request = await fetch(scoresList);

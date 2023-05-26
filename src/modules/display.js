@@ -19,7 +19,7 @@ const displayContent = async () => {
     li.textContent = `${obj.user}: ${obj.score}`;
     scoresList.appendChild(li);
     if (index % 2 !== 0) {
-      li.style.backgroundColor = '#d5d5d5';
+      li.style.backgroundColor = '#c6dd86';
     }
     return result;
   });
