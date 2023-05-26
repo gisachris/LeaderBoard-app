@@ -177,7 +177,7 @@ eval("// selecting from the Dom\nconst refreshButton = document.querySelector('.
   \**********************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://day-2/./src/modules/placement.js?");
+eval("const addButton = document.querySelector('.submitScores');\naddButton.style.alignSelf = 'flex-end';\n\n//# sourceURL=webpack://day-2/./src/modules/placement.js?");
 
 /***/ }),
 
