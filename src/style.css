@@ -1,3 +1,287 @@
-.hello {
-  color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+html,
+body {
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #95be2519;
+  font-family: 'Tilt Neon', cursive;
+}
+
+.DocContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.appContainer {
+  width: 70%;
+  min-height: 500px;
+  height: auto;
+  background-color: #2596be;
+  border-radius: 5px;
+  border: 2px solid #041014;
+  box-shadow: 2px 2px 5px #032532;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.titleHeader {
+  text-align: center;
+}
+
+.header {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.appsection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+
+.scoreDisplay {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreHeader {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.scoreHeading {
+  width: 30%;
+  height: auto;
+}
+
+.refreshScores {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.2rem;
+  text-align: center;
+  width: 110px;
+  height: 40px;
+  background-color: #a8d729;
+  box-shadow: 1.5px 1.5px 4px #3a4e04b3;
+  border-radius: 5px;
+  margin-top: 18px;
+}
+
+button:active {
+  background-color: #96be25;
+  box-shadow: 0 0 0 black;
+  border-radius: 5px;
+  font-family: 'Tilt Warp', cursive;
+}
+
+.scoreEntry {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 20px;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.scoreEntryHeading {
+  font-size: 1.5rem;
+}
+
+.InputName {
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 0 5px 5px 0;
+}
+
+.Inputscore {
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 0 5px 5px 0;
+}
+
+.submitScores {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.2rem;
+  text-align: center;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #a8d729;
+  box-shadow: 1.5px 1.5px 4px #3a4e04b3;
+  align-self: flex-end;
+  margin-right: 2px;
+}
+
+.scoresList {
+  border: 3px solid #222c04;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 20px;
+  height: auto;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.listInstance {
+  list-style-type: none;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+}
+
+.explain {
+  color: rgb(102, 102, 102);
+  font-size: 1rem;
+  font-style: italic;
+  position: relative;
+  margin-left: 20px;
+}
+
+/* designing modals */
+
+.parentModal {
+  display: none;
+  opacity: 0;
+  transition: opacity 50ms ease-in 0ms;
+}
+
+.success {
+  display: none;
+}
+
+.failure {
+  display: none;
+}
+
+.refreshed {
+  display: none;
+}
+
+.on {
+  display: block;
+}
+
+.sucessTextHolder {
+  position: relative;
+  top: -10px;
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  opacity: 0%;
+  transition: top, opacity 400ms ease-in 0ms;
+}
+
+.sucessText {
+  font-size: 1rem;
+}
+
+.failureTextHolder {
+  position: relative;
+  top: -10px;
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  opacity: 0%;
+  transition: top, opacity 400ms ease-in 0ms;
+}
+
+.failureText {
+  font-size: 1rem;
+}
+
+.refreshTextHolder {
+  position: relative;
+  top: -10px;
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  opacity: 0%;
+  transition: top, opacity 400ms ease-in 0ms;
+}
+
+.refreshText {
+  font-size: 1rem;
+}
+
+.animateParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.477);
+  display: flex;
+  justify-content: center;
+  opacity: 100%;
+  z-index: 2;
+}
+
+.animateHolder {
+  position: relative;
+  top: 70px;
+  opacity: 100%;
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.nameError {
+  color: rgb(255, 30, 0);
+  position: relative;
+  bottom: 10px;
+  display: none;
+}
+
+.scoreError {
+  color: rgb(255, 30, 0);
+  position: relative;
+  bottom: 10px;
+  display: none;
+}
+
+.viewError {
+  color: rgb(255, 30, 0);
+  position: relative;
+  bottom: 10px;
+  display: block;
 }
